@@ -16,7 +16,7 @@ const Cart = () => {
   const [cartProducts, setCartProducts] = useState(
     productData.getCartItemsInfo(cartItems)
   );
-
+  console.log(cartItems);
   const [totalProducts, setTotalProducts] = useState(0);
 
   const [totalPrice, setTotalPrice] = useState(0);

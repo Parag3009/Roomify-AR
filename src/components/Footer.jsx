@@ -6,7 +6,7 @@ import Grid from "./Grid";
 
 import logo from "../assets/images/Household_logo.png";
 import sponsors1 from "../assets/images/sponsors.png";
-import sponsors2 from "../assets/images/fedex_logo.png";
+// import sponsors2 from "../assets/images/fedex_logo.png";
 import sponsors3 from "../assets/images/uber.png";
 
 const Footer = () => {
@@ -32,18 +32,18 @@ const Footer = () => {
             <div className="footer__content" style={{ marginBottom: "2rem" }}>
               <p className="footer__content__info">
                 <i class="bx bx-map"></i>
-                <span>13 Ward, Arizona Street, Ward City, USA</span>
+                <span>13 Ward, Lamington Street, Mumbai</span>
               </p>
               <a className="footer__content__info" href="...">
                 <i class="bx bx-phone"></i>
-                <span>+1-234-56789</span>
+                <span>+91-7045454545</span>
               </a>
               <a
                 className="footer__content__info"
                 href="mailto:Abc123@donga.edu.vn"
               >
                 <i class="bx bx-mail-send"></i>
-                <span>tadwilson@gmail.com</span>
+                <span>Roomify@gmail.com</span>
               </a>
 
               <p className="footer__content__info">
@@ -87,13 +87,13 @@ const Footer = () => {
               </Link>
               <Link to="/">
                 <img
-                  src={sponsors2}
-                  alt="#"
-                  style={{
-                    width: "40%",
-                    marginLeft: "1.3rem",
-                    marginBottom: "1.2rem",
-                  }}
+                  // src={sponsors2}
+                  // alt="#"
+                  // style={{
+                  //   width: "40%",
+                  //   marginLeft: "1.3rem",
+                  //   marginBottom: "1.2rem",
+                  // }}
                 />
               </Link>
               <Link to="/">
@@ -109,7 +109,7 @@ const Footer = () => {
               </Link>
             </p>
             <p className="footer__content">
-              Sponsors for the branches of Future House since 2019.
+              Sponsors for the branches of Future House since 2023.
             </p>
           </div>
         </Grid>
