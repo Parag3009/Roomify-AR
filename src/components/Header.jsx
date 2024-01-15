@@ -177,20 +177,44 @@ const Header = () => {
   const headerRef = useRef(null);
   const history = useHistory(); // Import useHistory
 
+  
+
+  // useEffect(() => {
+  //   const fn = () => {
+  //     if (
+  //       document.body.scrollTop > 80 ||
+  //       document.documentElement.scrollTop > 80
+  //     ) {
+  //       headerRef.current.classList.add("shrink");
+  //     } else {
+  //       headerRef.current.classList.remove("shrink");
+  //     }
+  //   };
+  //   window.addEventListener("scroll", fn());
+  //   return () => {
+  //     window.removeEventListener("scroll", fn());
+  //   };
+  // }, []);
+
+
+
   useEffect(() => {
     const fn = () => {
-      if (
-        document.body.scrollTop > 80 ||
-        document.documentElement.scrollTop > 80
-      ) {
-        headerRef.current.classList.add("shrink");
+      if (window.scrollY > 0) {
+        if (headerRef.current) {
+          headerRef.current.classList.add("shrink");
+        }
       } else {
-        headerRef.current.classList.remove("shrink");
+        if (headerRef.current) {
+          headerRef.current.classList.remove("shrink");
+        }
       }
     };
-    window.addEventListener("scroll", fn());
+  
+    window.addEventListener("scroll", fn);
+  
     return () => {
-      window.removeEventListener("scroll", fn());
+      window.removeEventListener("scroll", fn);
     };
   }, []);
 

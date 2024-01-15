@@ -11,8 +11,12 @@ import { remove } from "../redux/product-modal/productModalSlice";
 import Button from "./Button";
 import numberWithCommas from "../utils/numberWithCommas";
 
+import { useHistory, Link } from 'react-router-dom';
+
 const ProductView = (props) => {
   const dispatch = useDispatch();
+
+  const history = useHistory();
 
   let product = props.product;
 
@@ -25,17 +29,27 @@ const ProductView = (props) => {
       categorySlug: "",
       slug: "",
       type: [],
+      AR:[],
       description: "",
     };
+
+ 
+
+  const[ar,setAr]=useState(product.AR);
+  console.log(ar);
 
   const [previewImg, setPreviewImg] = useState(product.image01);
 
   const [descriptionExpand, setDescriptionExpand] = useState(false);
 
   const [type, setType] = useState(product.type);
+  console.log(type);
 
+  console.log( product.type);
+  
   const [quantity, setQuantity] = useState(1);
 
+ 
   const updateQuantity = (type) => {
     if (type === "plus") {
       setQuantity(quantity + 1);
@@ -48,6 +62,7 @@ const ProductView = (props) => {
     setPreviewImg(product.image01);
     setQuantity(1);
     setType(product.type);
+    setAr(product.AR)
   }, [product]);
 
   const addToCart = () => {
@@ -79,6 +94,51 @@ const ProductView = (props) => {
     } else {
       alert("Fail");
     }
+    
+    
+
+  };
+
+  const Identity = ar;
+  console.log(Identity);
+  const ItemN = 'item7';
+
+  const singleAr=()=>{
+
+     history.push({
+  pathname: '/singlear',
+  state: { Identity: Identity, ItemN: ItemN },
+});
+
+{/* <Link
+  to={{
+    pathname: '/singlear',
+    state: { Identity: Identity, ItemN: ItemN },
+  }}
+>
+  Go to SingleAr
+</Link> */}
+
+
+    // history.push({
+    //   pathname: '/singlear',
+      
+    //   state: { Identity: Identity,itemN:itemN },
+      
+    // });
+
+//     <Link to={{ pathname: "/singlear", state: { Identity: [1, 2] } }}>Go to SingleAr</Link>
+
+//     // When navigating to SingleAr
+// history.push({
+//   pathname: '/singlear',
+//   state: { Identity: [1, 2] },
+// });
+
+
+
+    
+
   };
 
   return (
@@ -167,7 +227,17 @@ const ProductView = (props) => {
         </div>
         <div className="product__info__item">
           <Button onClick={() => addToCart()}>Add to cart</Button>
-          <Button onClick={() => goToCart()}>Purchase now</Button>
+          <Button onClick={() => goToCart()}>Purchase now</Button><br/>
+         
+          <Link
+  to={{
+    pathname: '/singlear',
+    state: { Identity: Identity, ItemN: ItemN },
+  }}
+>
+  <Button>View AR</Button>
+</Link>
+
         </div>
       </div>
       <div

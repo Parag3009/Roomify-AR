@@ -13,6 +13,7 @@ import policy from "../assets/fake-data/policy";
 import productData from "../assets/fake-data/products";
 
 import banner from "../assets/images/flash_sale.png";
+import productSet from "../assets/fake-data/set";
 
 const Home = () => {
   return (
@@ -100,6 +101,25 @@ const Home = () => {
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
             {productData.getProducts(12).map((item, index) => (
+              <ProductCard
+                key={index}
+                img01={item.image01}
+                img02={item.image02}
+                name={item.title}
+                price={Number(item.price)}
+                slug={item.slug}
+              />
+            ))}
+          </Grid>
+        </SectionBody>
+      </Section>
+
+
+      <Section>
+        <SectionTitle>Set</SectionTitle>
+        <SectionBody>
+          <Grid col={4} mdCol={2} smCol={1} gap={20}>
+            {productSet.getProducts(3).map((item, index) => (
               <ProductCard
                 key={index}
                 img01={item.image01}
