@@ -108,18 +108,19 @@ function Login() {
       height: '100vh',  // Adjust the height based on your needs
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
+      display: 'flex',
     }}>
       <div className='container'>
         <form onSubmit={handleSubmit} style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', padding: '20px', borderRadius: '10px' }}>
           <div className="mb-3">
-            <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-            <input type="email" className="form-control"  style={{ marginLeft: '10px' }} name='email' value={credentials.email} onChange={onChange} id="exampleInputEmail1" aria-describedby="emailHelp" />
+            <label htmlFor="exampleInputEmail1" className="form-label" style={{ fontSize: '24px' }}>Email address</label>
+            <input type="email" className="form-control"  style={{ marginLeft: '10px',width:'250px' }} name='email' value={credentials.email} onChange={onChange} id="exampleInputEmail1" aria-describedby="emailHelp" />
           </div>
 
           <div className="mb-3">
-            <br/><label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-            <input type="password" className="form-control"  style={{ marginLeft: '24px' }} name='password' value={credentials.password} onChange={onChange} id="exampleInputPassword1" />
+            <br/><label htmlFor="exampleInputPassword1" className="form-label" style={{ fontSize: '24px' }}>Password</label>
+            <input type="password" className="form-control"  style={{ marginLeft: '10px',width:'250px' }} name='password' value={credentials.password} onChange={onChange} id="exampleInputPassword1" />
           </div>
 
           <br/><button type="submit" className="m-3 btn btn-success" style={{ backgroundColor: 'yellowgreen', color: 'white', padding: '5px' }}>Submit</button>

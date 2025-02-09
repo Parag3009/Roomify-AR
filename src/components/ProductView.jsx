@@ -30,6 +30,7 @@ const ProductView = (props) => {
       slug: "",
       type: [],
       AR:[],
+      IMG:[],
       description: "",
     };
 
@@ -37,6 +38,9 @@ const ProductView = (props) => {
 
   const[ar,setAr]=useState(product.AR);
   console.log(ar);
+  console.log("haha")
+  const[img,setIMG]=useState(product.IMG);
+  console.log(img);
 
   const [previewImg, setPreviewImg] = useState(product.image01);
 
@@ -62,7 +66,8 @@ const ProductView = (props) => {
     setPreviewImg(product.image01);
     setQuantity(1);
     setType(product.type);
-    setAr(product.AR)
+    setAr(product.AR);
+    setIMG(product.IMG)
   }, [product]);
 
   const addToCart = () => {
@@ -102,13 +107,16 @@ const ProductView = (props) => {
   const Identity = ar;
   console.log(Identity);
   const ItemN = 'item7';
+  const kala = img
+  
 
   const singleAr=()=>{
 
      history.push({
   pathname: '/singlear',
-  state: { Identity: Identity, ItemN: ItemN },
+  state: { Identity: Identity, ItemN: ItemN ,kala:kala},
 });
+
 
 {/* <Link
   to={{

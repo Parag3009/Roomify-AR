@@ -36,27 +36,28 @@ function Signup() {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center'
+      
     }}>
       <div className='container'>
         <form onSubmit={handleSubmit} style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', padding: '20px', borderRadius: '10px' }}>
           <div className="mb-3">
-            <label htmlFor="name" className="form-label">UserName</label>
-            <input type="text" className="form-control" name='name' value={credentials.name} onChange={onChange} style={{ marginLeft: '20px' }} />
+            <label htmlFor="name" className="form-label" style={{ fontSize: '20px' }}>UserName</label>
+            <input type="text" className="form-control" name='name' value={credentials.name} onChange={onChange} style={{ marginLeft: '10px',width:'250px' }} />
           </div>
 
           <br/><div className="mb-3">
-            <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-            <input type="email" className="form-control" name='email' value={credentials.email} onChange={onChange} style={{ marginLeft: '9px' }} />
+            <label htmlFor="exampleInputEmail1" className="form-label" style={{ fontSize: '20px' }}>Email address</label>
+            <input type="email" className="form-control" name='email' value={credentials.email} onChange={onChange} style={{ marginLeft: '10px',width:'250px'}} />
           </div>
 
          <br/> <div className="mb-3">
-            <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-            <input type="password" className="form-control" name='password' value={credentials.password} onChange={onChange} style={{ marginLeft: '20px' }} />
+            <label htmlFor="exampleInputPassword1" className="form-label" style={{ fontSize: '20px' }}>Password</label>
+            <input type="password" className="form-control" name='password' value={credentials.password} onChange={onChange} style={{ marginLeft: '10px',width:'250px'}} />
           </div>
 
           <br/><div className="mb-3">
-            <label htmlFor="exampleInputPassword1" className="form-label">Address</label>
-            <input type="text" className="form-control" name='geolocation' value={credentials.geolocation} onChange={onChange} style={{ marginLeft: '20px' }} />
+            <label htmlFor="exampleInputPassword1" className="form-label" style={{ fontSize: '20px' }}>Address</label>
+            <input type="text" className="form-control" name='geolocation' value={credentials.geolocation} onChange={onChange} style={{ marginLeft: '10px',width:'250px' }} />
           </div>
 
           <br/><button type="submit" className="m-3 btn btn-success" style={{ backgroundColor: 'yellowgreen', color: 'white', padding: '6px' }}>

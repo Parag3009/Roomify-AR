@@ -9,6 +9,7 @@ import Button from "../components/Button";
 
 import productData from "../assets/fake-data/products";
 import numberWithCommas from "../utils/numberWithCommas";
+import Payme from "./Payme";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cartItems.value);
@@ -46,7 +47,8 @@ const Cart = () => {
             </div>
           </div>
           <div className="cart__info__btn">
-            <Button size="block">Purchase</Button>
+            {/* <Button size="block">Purchase</Button> */}
+            <Payme totalPrice={totalPrice}/>
             <Link to="/catalog">
               <Button size="block">Discover more</Button>
             </Link>

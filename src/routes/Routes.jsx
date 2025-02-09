@@ -8,6 +8,7 @@ import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Ar from "../pages/Ar";
 import SingleAr from "../pages/SingleAr";
+import Recor from "../pages/Recor";
 
 const AppRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const AppRoutes = () => {
       <Route path="/signupuser" component={Signup}/>
       <Route path="/ar" component={Ar}/>
       <Route path="/singlear" component={SingleAr}/>
+      <Route path="/reco" component={Recor}/>
     </Switch> 
   );
 };

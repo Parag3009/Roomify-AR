@@ -1,5 +1,6 @@
 $main-bg: #fff;
 $main-color: #2ee7b0ab;
+$bgkeclr: rgb(223, 238, 247);
 
 $txt-main-color: #000;
 $txt-second-color: #8d8d8d;
@@ -18,12 +19,23 @@ $box-shadow: rgba(22, 51, 50, 0.123) 0px 13px 25px;
 $colors: (
   "blue": #4267b2,
   "orange": #fbb96b,
-  "pink": #fe7e73,
+  "pink": #73e5fe,
   "white": #fff,
   "black": #000,
   "main": $main-color,
   "red": #ff0000,
+  
 );
+
+
+// "blue": #4267b2,
+//   "orange": #fbb96b,
+//   "pink": #fe7e73,
+//   "white": #fff,
+//   "black": #000,
+//   "main": $main-color,
+//   "red": #ff0000,
+
 
 $mobile-width: 600px;
 $tablet-width: 1250px; //1024px
